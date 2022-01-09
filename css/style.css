@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* general */
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+       background-color: rgb(21, 21, 21);
+   color: white;
+}
+:root{
+    --maincolor : rgb(229, 255, 0);
+    --textcolor : black;
+    --subcolor  : rgb(53, 53, 53);
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.list-unstyled{
+    list-style: none;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.pd-y{
+    padding-top: 120px;
+}
+.section-header{
+    margin-bottom: 50px;
+}
+.section-header .section-title{
+    font-size: 2em ;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.section-header .line{
+    display: block;
+    height: 3px;
+    width: 70px;
+    background-color: var(--maincolor);
+    margin: 0 auto 70px auto;
+}
+.section-header .section-title:hover .line{
+    width: 150%;
+}
+
+/* header */
+header{
+   background-color: rgb(21, 21, 21);
+   position: fixed;
+   z-index: 999;
+   top: 0;
+   width: 100%;
+   color:  var(--textcolor);
+   padding: 10px;
+   color: white;
+   transition: .5s;
+}
+header.sticky{
+    padding : 5px;
+    background-color: rgb(141 141 141);
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+}
+header .container .logo{
+    font-size: 1.9em;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    font-weight: bold;
+}
+header.sticky .logo{
+    color: black;
+}
+header .container .logo::first-letter{
+    font-size: 1.4em;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    text-decoration: underline;
+    color: var(--maincolor);
+}
+header .container nav .header-list{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    padding: 20px;
+    font-weight: 500;
+}
+header .container nav .header-list li{
+    margin-left : 20px;
+    text-transform: capitalize;
+}
+header .container nav .header-list li::after{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    background-color: var(--maincolor);
+    border-radius: 2px;
+    transition: width .5s; 
+}
+header .container nav .header-list li:hover:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--maincolor);
+    border-radius: 2px;
+    transition: width .5s; 
+}
+header.sticky .container nav .header-list li a{
+    color: black;
+}
+
+/* home */
+.home{
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
+    position: relative;
+    padding-top: 100px;
+    height: 488px;
+    color: black;
+    background-color: rgb(141 141 141);
+    border-radius: 10px;
+}
+.home .container .home-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home .container .home-left h1{
+    text-transform: capitalize;
+    
+}
+.home-name{
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+.home-name span{
+    color: var(--maincolor);
+}
+.home-desc{
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-weight: 500;
+   
+}
+.home-left a button{
+
+    margin-top: 20px;
+    background-color: var(--maincolor);
+    height: 81px;
+        width: 168px;
+        border-radius: 20px;
+        color: black;
+        font-size: 1,7em;
+        font-weight: bold;
+        transition: .5s;
+}
+.home-left a button:hover{
+    transform: scale(1.05);
+}
+/* about */
+.about{
+  text-align: center;
+}
+.about .container {
+    position: relative;
+}
+.about .container .about-content {
+    text-align: left;
+    padding: 0 60px;
+}
+.about .container .about-content .about-infos li{
+    font-size: 1.2em;
+    text-transform: capitalize;
+    padding: 6px;
+}
+.about .container .about-content .about-infos li span{
+    color: yellow;
+}
+.about .container .about-content a button{
+    margin: 20px;
+    width: 149px;
+    height: 78px;
+    background-color: yellow;
+    border-radius: 20px;
+    font-size: 1.1em;
+    color: black;
+    font-weight: 500;
+    transition: .5s;
+}
+.about .container .about-content a button:hover{
+    transform: scale(1.05);
+}
+.projectscm{
+    visibility: hidden;
+    opacity: 0;
+}
+.about .container .xp{
+    position: absolute;
+    top: 30%;
+    left: 71%;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+  
+    color: white;
+    width: 210px;
+    height: 145px;
+    font-weight: 500;
+    padding: 15px;
+    border-radius: 20px;
+    transition: .5s;
+
+}
+.about .container .xp span{
+    font-weight: bold;
+    color: yellow;
+    font-size: 2em;
+
+    
+}
+.about .container .xp:hover{
+    transform: scale(1.05);
+
+}
+/* education */
+
+.education .education-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.education .education-content .education-item{
+    width: 400px;
+    height: 149px;
+    border-left: white 2px solid;
+    position: relative;
+}
+.education-item .top{
+     position: relative;
+     padding-left: 30px;
+     margin-bottom: 40px;
+}
+.education-item .top .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+   transform: translate(-50%,-50%);
+    background-color: yellow; 
+    padding: 15px;  
+    border-radius: 50%; 
+}
+.education-item .top span{
+    position: absolute;
+    top: 0;
+    font-size: 0.9em;
+    transform: translate(15% , -50%);
+    background-color: rgb(31, 31, 31);
+    color: white;
+    padding: 9px;
+    border-radius: 30px;
+}
+
+.education-item h3{
+    font-size: 1.1em;
+    padding-left: 45px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.education-item p{
+    font-size: 1em;
+    padding-left: 45px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.education-item::after{
+    content: "";
+    display: block;
+    width: 0%;
+    margin-bottom: 10px;
+    height: 3px;
+    background-color:white;
+    border-radius: 2px;
+    transition: width .5s; 
+}
+.education-item:hover::after{
+
+    width: 100%;
+
+}
+.education .container .education-content .education-item .top .icon{
+    color: black;
+}
+/* work */
+/* contact */
+.contact{
+    text-align: center;
+}
+.inscrip-items{
+    overflow: hidden;
+    text-align: center;
+}
+.inscrip-item{
+    width: 30%;
+    float: left;
+
+    height: 200px;
+}
+.inscrip-item.mg{
+    margin: 0 5%;
+}
+.inscrip.pd-y{
+    margin-bottom: -60px;
+}
+.inscrip-item .icon{
+    color: yellow;
+    font-size: 2.7em;
+    margin: 20px auto;
+}
+.insrip-item-title{
+    text-transform: capitalize;
+    margin: 10px auto;
+
+}
+.inscrip-item-desc{
+    margin: 30px auto;
+    color: rgb(179, 175, 175);
+}
+
+input{
+    background-color: rgb(141 141 141);
+    height: 35px;
+    border: none;
+    text-align: left;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    
+}
+input[placeholder="name"],input[placeholder=email]{
+    width: 40%;
+    float: left;
+    margin-left: 6.8%;
+}
+input[placeholder="subject"]{
+    margin: 20px auto;
+    width: 86.6%;
+}
+input[placeholder="message"]{
+    width: 86.6%;
+    height: 60px;
+}
+.inscrip-valid{
+    margin: 80px auto;
+    text-align: center;
+    height: 40px;
+    width:150px;
+    border-radius: 6px;
+    background-color: yellow;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+.inscrip-valid:hover{
+    background-color: #57585a;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: yellow;
+    opacity: .8; /* Firefox */
+  }
+
+/* footer */
+footer{
+    background-color: #57585a;
+    color: black;
+    width: 100%;
+    border-top: 2px white solid;
+    text-align: center;
+    height: 400px;
+}
+footer .logo{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-size: 1.9em;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    font-weight: bold;
+}
+footer .logo::first-letter{
+    font-size: 1.4em;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    text-decoration: underline;
+    color: var(--maincolor);
+}
+footer .icons-container{
+   width: 28%;
+   margin: auto;
+   margin-bottom: 30px;
+}
+footer .icons-container .footer-icons{
+    display: flex;
+    justify-content: space-between;
+
+}
+footer .icons-container .footer-icons .icon{
+color: yellow;
+}
+footer span{
+    font-size: 1em;
+    margin-bottom: 100px;
+}
+::-webkit-scrollbar{
+    width: 12px;
+
+}
+::-webkit-scrollbar-thumb{
+    background-color: yellow;
+    border-radius: 6px;
+}
+
+
+
+@media only screen and ( max-width:887px){
+    body{
+        font-size: 12px;
+    }
+}
+
+@media only screen and ( max-width:887px){
+    body{
+        font-size: 10px;
+    }
+    .education-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .education-item{
+        margin-top: 50px;
+        height: 106px;
+    }
+    .education-item:hover::after{
+
+        width: 0%;
+    
+    }
+}
+
+@media only screen and ( max-width:793px){
+   .home .container .home-left h1{
+       font-size: 20px;
+   }
+   .home-desc{
+    font-size: 16px;
+   }
+   .home-left a button{
+       font-size: 17px;
+   }
+
+
+}
+@media only screen and ( max-width:712px){
+
+    .about .xp{
+margin-top:100px;
+    }
+}
+@media only screen and ( max-width:647px){
+    header{
+        position: relative;
+        text-align: center;
+
+    
+    }
+    header.sticky{
+        background-color:rgb(21, 21, 21);
+  
+    }
+    header.sticky .logo , header.sticky .container nav .header-list li a{
+        color: white;
+    }
+    header .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .home{
+        height: 528px;
+        margin: auto;
+    }
+    .home .container .home-content{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+    .home img{
+        margin-left: 30%;
+        display: block;
+        text-align: center;
+        width: 38%;
+    }
+    .about .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .xp{
+        visibility: hidden;
+        opacity: hidden;
+    }
+    .projectscm{
+        visibility: visible;
+        opacity: 1;
+    }
+
+}
+
+
